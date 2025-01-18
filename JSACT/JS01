@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Up</title>
+</head>
+<body>
+  <h1>Simple Count Up</h1>
+  <p>Click the button to increase the count:</p>
+  <p id="count">0</p>
+  <button id="countButton">Count Up</button>
+
+  <script>
+    let count = 0;
+    const countDisplay = document.getElementById("count");
+    const countButton = document.getElementById("countButton");
+
+    countButton.addEventListener("click", () => {
+      count++;
+      countDisplay.textContent = count;
+    });
+  </script>
+</body>
+</html>
 
