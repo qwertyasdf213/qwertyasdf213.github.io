@@ -1,0 +1,270 @@
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --accent-color: #64ff7b;
+    --secondary-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    margin: 6rem 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: start;
+}
+
+.course-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.course-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.course-card:nth-child(3) {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 140%;
+}
+
+.course-card:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 0.25rem;
+}
+
+.course-card:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 4rem;
+}
+
+.course-card:nth-child(6) {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 110%;
+}
+
+.course-card:nth-child(7) {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 0.5rem;
+}
+
+.course-card {
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    background: #444;
+    height: 4px;
+    border-radius: 2px;
+    margin: 1rem 0;
+}
+
+.progress {
+    background: var(--accent-color);
+    height: 100%;
+    border-radius: 2px;
+}
+
+.contact {
+    margin-top: 4rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-links span {
+    color: var(--text-color);
+    cursor: default;
+    transition: color 0.3s ease;
+}
+
+.social-links span:hover {
+    color: var(--accent-color);
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    color: var(--text-color);
+}
+
+ol li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.answer {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.certificate-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.gallery-item:first-child {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.gallery-item:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.gallery-item:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.certificate-description {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+} 
